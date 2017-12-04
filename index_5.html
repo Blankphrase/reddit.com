@@ -1,347 +1,378 @@
-
-<!doctype html>
-<html lang="en" class="no-font">
+<!DOCTYPE html>
+<html lang="en" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/  dc: http://purl.org/dc/terms/  foaf: http://xmlns.com/foaf/0.1/  og: http://ogp.me/ns#  rdfs: http://www.w3.org/2000/01/rdf-schema#  schema: http://schema.org/  sioc: http://rdfs.org/sioc/ns#  sioct: http://rdfs.org/sioc/types#  skos: http://www.w3.org/2004/02/skos/core#  xsd: http://www.w3.org/2001/XMLSchema# ">
 <head>
+  <meta charset="utf-8" /><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1044.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+<meta name="title" content="Reddit Help | Reddit Help" />
+<meta property="og:site_name" content="Reddit Help" />
+<meta property="og:title" content="Reddit Help" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://www.reddithelp.com/en/reddit-help" />
+<link rel="canonical" href="https://www.reddithelp.com/en" />
+<link rel="shortlink" href="https://www.reddithelp.com/en" />
+<meta name="drupal:entity_bundle" content="landing" />
+<meta name="drupal:entity_id" content="226" />
+<meta name="drupal:entity_type" content="node" />
+<meta name="Generator" content="Drupal 8 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="shortcut icon" href="/themes/custom/reddit_helpdesk_theme/favicon.ico" type="image/vnd.microsoft.icon" />
+<link rel="alternate" hreflang="en" href="https://www.reddithelp.com/en/reddit-help" />
+<link rel="shortlink" href="/en/node/226" />
+<link rel="revision" href="/en/reddit-help" />
+
+    <title>Reddit Help | Reddit Help</title>
+    <link rel="stylesheet" href="/sites/default/files/css/css_teUAI-ETOIqCRXN8OV9mhZMpMys2FTlXjZgoXmHJo9w.css?ovz27u" media="all" />
+<link rel="stylesheet" href="/sites/default/files/css/css_oswQe7MIGdgi2R1PY7WTOi1UMqObN0Ac1MJddeEh55s.css?ovz27u" media="all" />
+
+      
+<!--[if lte IE 8]>
+<script src="/sites/default/files/js/js_VtafjXmRvoUgAzqzYTA3Wrjkx9wcWhjP0G4ZnnqRamA.js"></script>
+<![endif]-->
+
+        </head>
+<body class="path-frontpage page-node-type-landing">
+<a href="#main-content" class="visually-hidden focusable skip-link">
+  Skip to main content
+</a>
+
+<div id="page-wrapper">
+  <div id="page">
+    <header class="site-header">
+      <div class="site-header--tool-banner wrapper">
+          <div id="block-reddit-helpdesk-theme-branding" data-block-plugin-id="system_branding_block">
+  
     
-      <script type='text/javascript'>
-        var googletag = googletag || {};
-        googletag.cmd = googletag.cmd || [];
-        (function () {
-          var gads = document.createElement('script');
-          gads.async = true;
-          gads.type = 'text/javascript';
-          var useSSL = 'https:' == document.location.protocol;
-          gads.src = (useSSL ? 'https:' : 'http:') +
-          '//www.googletagservices.com/tag/js/gpt.js';
-          var node = document.getElementsByTagName('script')[0];
-          node.parentNode.insertBefore(gads, node);
-        })();
-      </script>
+    <aside class="site-logo">
+  <a href="/en" title="Home" rel="home">Reddit Help</a>
+</aside>
+</div>
 
-      <script type='text/javascript'>
-        googletag.cmd.push(function () {
-          googletag.defineSlot('/4005506/Responsive728x90', [728, 90], 'div-gpt-ad-1384922925289-0').addService(googletag.pubads());
-          googletag.pubads().enableSingleRequest();
-          googletag.enableServices();
-        });
-      </script>
 
-      <script type="text/javascript">
-        function trackOutboundLink(link, category, action, label) {
-          if (label) {
-            try {
-              _gaq.push(['_trackEvent', category, action, label]);
-            } catch (err) {}
-          } else {
-            try {
-              _gaq.push(['_trackEvent', category, action]);
-            } catch (err) {}
-          }
-
-          setTimeout(function () {
-            document.location.href = link.href;
-          }, 100);
-        }
-      </script>
-
-      <script type="text/javascript">
-        var _gaq = _gaq || [];
-        _gaq.push(['_setAccount', 'UA-11645097-1']);
-        _gaq.push(['_setDomainName', 'redditgifts.com']);
-        _gaq.push(['_setCustomVar', 1, 'VisitorType', 'Anonymous', 2]);
-        _gaq.push(['_trackPageview']);
-        _gaq.push(['_trackPageLoadTime']);
-        (function() {
-            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-        })();
+      </div>
+            <div class="site-header--alert-banner">
         
-        var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-        document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-      </script>
-    
+      </div>
+            <div class="site-header--banner">
+                            <h2 class="branding__name">
+    <a href="/en" title="Home" rel="home">Reddit Wiki</a>
+  </h2>
 
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>reddit gift exchanges and more! - redditgifts</title>
-    <meta name="description" content="Get the best gift you&#39;ve ever gotten, give the best present you&#39;ve ever given!"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <meta name="HandheldFriendly" content="true" />
-    <meta name="keywords" content=""/>
-    <meta name="google-site-verification" content="-SK-7SvIq43hdbeJWaDwx37Uu5YZid2SoHg_Ylz_pgw" />
-    <!-- og:tags for grabbing thumbnails and site info, need to add og:title and og:description to each page -->
-    <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="redditgifts" />
-    <meta property="fb:app_id" content="291585047533359" />
-    
-  <meta property="og:title" content="reddit gift exchanges and more! - redditgifts" />
-  <meta property="og:description" content="Get the best gift you&#39;ve ever gotten, give the best present you&#39;ve ever given!" />
-  <meta property="og:url" content="http://www.redditgifts.com/" />
-  <meta property="og:image" content="https://d2npbuaakacvlz.cloudfront.net/images/mini_logo.gif" />
-  <meta name="msvalidate.01" content="1BC8B0F05B81EC349230836E6C9F0B13" /> 
-  <link rel="canonical" href="http://www.redditgifts.com/" />
+                  <div class="search-form">
+  <form action="/en/search" method="get" id="search-block-form" accept-charset="UTF-8">
+  <div class="js-form-item form-item js-form-type-search form-item-keys js-form-item-keys form-no-label">
+      <label for="edit-keys" class="visually-hidden">Search</label>
+        <input title="Enter the terms you wish to search for." autocomplete="off" data-reddit-autocomplete-type="results_direct" data-reddit-autocomplete-min-length="3" data-drupal-selector="edit-keys" class="form-autocomplete form-search" data-autocomplete-path="/en/search-autocomplete/f5xLpEG8-iUbBYw07M9hfLVWW1qMzcdUbfyUuzt3LJc" type="search" id="edit-keys" name="keys" value="" size="15" maxlength="128" placeholder="What are you looking for?" />
+
+        </div>
+<div data-drupal-selector="edit-actions" class="form-actions js-form-wrapper form-wrapper" id="edit-actions"><button data-drupal-selector="edit-submit" type="submit" id="edit-submit" value="Search" class="button js-form-submit form-submit">Search</button>
+</div>
+
+</form>
+
+</div>
 
 
-    <link rel="icon" href="https://d2npbuaakacvlz.cloudfront.net/images/favicon.png">
+      </div>
+      <div class="site-header--wayfinding-banner wrapper">
+        
+      </div>
+    </header>
 
-    <link rel="stylesheet" href="https://d2npbuaakacvlz.cloudfront.net/CACHE/css/cb0303ca2c89.css" type="text/css" />
-
-    <link href="https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
-    <link href="https://d2npbuaakacvlz.cloudfront.net/gritter/css/jquery.gritter.css" rel="stylesheet" type="text/css" media="screen">
-    
-
-    <script>
-      // Give JS access to the static URL path
-      window.STATIC_URL = "https://d2npbuaakacvlz.cloudfront.net/";
-    </script>
-
-    <script src="https://d2npbuaakacvlz.cloudfront.net/js/lib/jquery-2.0.3.min.js"></script>
-    <script src="https://d2npbuaakacvlz.cloudfront.net/js/lib/jquery-ui-1.10.3.min.js"></script>
-
-    
-
-    
-</head>
-<body>
-    
-      
-
-<header class="header-main js-header-main">
-  
-<div class="header-user-bar-container">
-    <div class="playground-area">
-        <a href="/" title="redditgifts" class="hero-img-container">
-            <img nopin="nopin" src="https://d2npbuaakacvlz.cloudfront.net/images/redditgifts-letters.png" alt="redditgifts text logo">
-        </a>
-        <ul class="user-bar">
-            
-                
-                    <li class="user-bar-item login-info">
-                        <span class="welcome-msg">Welcome to redditgifts!</span>
-                        <a href="/profiles/login/" title="Log in">Log in</a>
-                        <span class="no-phone">or</span>
-                        <a href="/profiles/signup/" title="Create an account" class="no-phone">create an account</a>
-                    </li>
-                
+    <main class="site-content">
+      <div class="page-wrapper wrapper ">
+        <div class="content-header">
           
-        </ul>
-    </div>
+        </div>
+        <div class="primary-grid">                        
+<div id="block-reddit-helpdesk-theme-pagetitle" data-block-plugin-id="page_title_block" class="page-title--block">
+  
+    
+      
+
+  <h1 class="page-title visually-hidden"><span>Reddit Help</span>
+</h1>
+
+
+  </div>
+
+      
+  <div class="block topic-list">
+  <h2 class="block-title">
+    <img src="https://www.reddithelp.com/sites/default/files/topic-icons/icon_moose.png" alt="Reddit Basics icon" class="topic-list--icon"><span class="topic-list--title-text">Reddit Basics</span>
+  </h2>
+  <div class="block-content">
+    <nav class="topic-list--list">
+      <ul>
+                      
+<li class="link-list--item"><a href="/en/categories/reddit-101/communities/how-can-i-find-more-communities" class="link-list--link">
+                How can I find more communities?
+            </a></li>
+              
+<li class="link-list--item"><a href="/en/categories/reddit-101/moderators/what-moderator" class="link-list--link">
+                What is a moderator?
+            </a></li>
+              
+<li class="link-list--item"><a href="/en/categories/reddit-101/reddit-basics/can-anyone-post-reddit" class="link-list--link">
+                Can anyone post on Reddit?
+            </a></li>
+              
+<li class="link-list--item"><a href="/en/categories/reddit-101/posting-commenting/why-didnt-my-post-show" class="link-list--link">
+                Why didn&#039;t my post show up?
+            </a></li>
+                  <li class="link-list--item view-more"><a href="/en/categories/reddit-101/reddit-basics" class="view-more--link">View Topic</a></li>
+      </ul>
+    </nav>
+  </div>
 </div>
 
+
+
+      
+  <div class="block topic-list">
+  <h2 class="block-title">
+    <img src="https://www.reddithelp.com/sites/default/files/topic-icons/icon_ban.png" alt="Rules &amp; Reporting icon" class="topic-list--icon"><span class="topic-list--title-text">Rules &amp; Reporting</span>
+  </h2>
+  <div class="block-content">
+    <nav class="topic-list--list">
+      <ul>
+                      
+<li class="link-list--item"><a href="/en/categories/reddit-101/rules-reporting/account-and-community-restrictions/what-are-rules" class="link-list--link">
+                What are the rules?
+            </a></li>
+              
+<li class="link-list--item"><a href="/en/categories/reddit-101/rules-reporting/account-and-community-restrictions/suspensions" class="link-list--link">
+                Suspensions
+            </a></li>
+              
+<li class="link-list--item"><a href="/en/categories/rules-reporting/account-and-community-restrictions/what-does-report-button-do" class="link-list--link">
+                What does the &quot;report&quot; button do?
+            </a></li>
+              
+<li class="link-list--item"><a href="/en/categories/reddit-101/rules-reporting/account-and-community-restrictions/quarantined-subreddits" class="link-list--link">
+                Quarantined Subreddits
+            </a></li>
+                  <li class="link-list--item view-more"><a href="/en/categories/rules-reporting" class="view-more--link">View Topic</a></li>
+      </ul>
+    </nav>
+  </div>
+</div>
+
+
+
+      
+  <div class="block topic-list">
+  <h2 class="block-title">
+    <img src="https://www.reddithelp.com/sites/default/files/topic-icons/icon_cat.png" alt="Using Reddit icon" class="topic-list--icon"><span class="topic-list--title-text">Using Reddit</span>
+  </h2>
+  <div class="block-content">
+    <nav class="topic-list--list">
+      <ul>
+                      
+<li class="link-list--item"><a href="/en/categories/using-reddit/your-reddit-account/it-possible-change-my-username" class="link-list--link">
+                Is it possible to change my username?
+            </a></li>
+              
+<li class="link-list--item"><a href="/en/categories/using-reddit/submitting-posting/why-arent-my-posts-showing" class="link-list--link">
+                Why aren&#039;t my posts showing up?
+            </a></li>
+              
+<li class="link-list--item"><a href="/en/categories/using-reddit/creating-subreddits/how-do-i-create-community" class="link-list--link">
+                How do I create a community?
+            </a></li>
+              
+<li class="link-list--item"><a href="/en/categories/using-reddit/frontpage-and-subscriptions/rall-or-rpopular-my-home-feed" class="link-list--link">
+                Is r/all or r/popular my &quot;home feed&quot;?
+            </a></li>
+                  <li class="link-list--item view-more"><a href="/en/categories/using-reddit" class="view-more--link">View Topic</a></li>
+      </ul>
+    </nav>
+  </div>
+</div>
+
+
+
+      
+  <div class="block topic-list">
+  <h2 class="block-title">
+    <img src="https://www.reddithelp.com/sites/default/files/topic-icons/icon_star.png" alt="Advertising icon" class="topic-list--icon"><span class="topic-list--title-text">Advertising</span>
+  </h2>
+  <div class="block-content">
+    <nav class="topic-list--list">
+      <ul>
+                      
+<li class="link-list--item"><a href="/en/categories/advertising/advertising-101/how-reddit-ads-work" class="link-list--link">
+                How Reddit ads work
+            </a></li>
+              
+<li class="link-list--item"><a href="/en/categories/advertising/advertising-101/ad-specifications" class="link-list--link">
+                Ad Specifications
+            </a></li>
+              
+<li class="link-list--item"><a href="/en/categories/advertising/creating-your-ad/setting-account" class="link-list--link">
+                Setting up an Account
+            </a></li>
+              
+<li class="link-list--item"><a href="/en/categories/advertising/creating-your-ad/step-step-how-create-ad" class="link-list--link">
+                Step by Step: How to Create an Ad
+            </a></li>
+                  <li class="link-list--item view-more"><a href="/en/categories/advertising" class="view-more--link">View Topic</a></li>
+      </ul>
+    </nav>
+  </div>
+</div>
+
+
+
+      
+  <div class="block topic-list">
+  <h2 class="block-title">
+    <span class="topic-list--title-text">Reddit Apps</span>
+  </h2>
+  <div class="block-content">
+    <nav class="topic-list--list">
+      <ul>
+                      
+<li class="link-list--item"><a href="/en/categories/reddit-apps/reddit-app/where-are-my-subscriptions" class="link-list--link">
+                Where are my subscriptions? 
+            </a></li>
+              
+<li class="link-list--item"><a href="/en/categories/reddit-apps/reddit-app/how-do-i-make-post" class="link-list--link">
+                How do I make a post?
+            </a></li>
+              
+<li class="link-list--item"><a href="/en/categories/reddit-apps/reddit-app/how-do-i-filter-subreddits-native-apps" class="link-list--link">
+                How do I filter subreddits on the Native Apps?
+            </a></li>
+              
+<li class="link-list--item"><a href="/en/categories/reddit-apps/reddit-app/how-do-i-disable-ads-native-apps" class="link-list--link">
+                How do I disable ads on the Native Apps?
+            </a></li>
+                  <li class="link-list--item view-more"><a href="/en/categories/reddit-apps" class="view-more--link">View Topic</a></li>
+      </ul>
+    </nav>
+  </div>
+</div>
+
+
+
   
-<div class="header-nav-container">
-    <div class="playground-area">
-        <a href="/" title="redditgifts" class="hero-img-container">
-            <img nopin="nopin" src="https://d2npbuaakacvlz.cloudfront.net/images/redditgifts-letters.png" alt="redditgifts text logo">
-        </a><!-- No spaces
-        --><ul class="header-nav">
-            <li class="header-nav-item">
-                <a href="/exchanges/" title="Gift Exchanges">Gift Exchanges</a>
-            </li><!-- No spaces
-            --><li class="header-nav-item">
-                <a href="/gallery/" title="Gallery">Gallery</a>
-            </li><!-- No spaces
-            --><li class="header-nav-item">
-                
-                    <a href="/elves/" title="Elves">Elves</a>
-                
+  <div class="block link-to-support">
+        Not finding what you're looking for? <a href="/en/submit-request">Contact Support</a>
+    </div>
+
+
+
+            
+            </div>                </div>
+    </main>
+
+    <footer class="site-footer--container">
+      <div class="layout-container">
+        <div class="site-footer__content clearfix">
+          
+<footer id="colophon" class="site-footer" role="contentinfo">
+  <div class="footer-callouts">
+    <div class="wrapper clearfix">
+      <div class="footer-columns">
+        <aside class="callout callout-menu">
+          <div ><ul  class="menu"><li><a href="https://about.reddit.com/">About</a></li>
+              <li><a href="https://about.reddit.com/careers/">Careers</a></li>
+              <li><a href="https://about.reddit.com/press/">Press</a></li>
+              <li><a href="https://about.reddit.com/engineering/">Engineering</a></li>
+            </ul></div>				</aside>
+
+        <aside class="callout callout-menu">
+          <div ><ul  class="menu"><li  class="  current-current_page_item "><a href="/">Upvoted Blog</a></li>
+              <li><a href="https://www.reddit.com/dev/api">Developers</a></li>
+              <li><a href="https://www.reddit.com/advertising/">Advertising</a></li>
+              <li><a href="https://reddit.zendesk.com/">Help</a></li>
+            </ul></div>				</aside>
+
+        <aside class="callout callout-menu callout-last">
+          <div ><ul  class="menu"><li  class="blue   "><a href="https://www.reddit.com/mobile/download">Get the Reddit App</a></li>
+              <li><a href="https://www.reddit.com/gold">Get Reddit Gold</a></li>
+              <li><a href="https://www.redditgifts.com/">Reddit Gifts</a></li>
+              <li><a href="https://www.reddit.com">Reddit.com</a></li>
+            </ul></div>				</aside>
+      </div><!-- .footer-columns -->
+
+      <div class="mobile-footer">
+        <aside class="callout callout-menu">
+          <div class="menu-mobile-footer-container"><ul  class="menu"><li><a href="https://about.reddit.com/">About</a></li>
+              <li><a href="https://www.reddit.com/advertising/">Advertising</a></li>
+              <li><a href="https://about.reddit.com/careers/">Careers</a></li>
+              <li><a href="https://reddit.zendesk.com/">Help</a></li>
+              <li><a href="https://about.reddit.com/press/">Press</a></li>
+              <li  class="blue   "><a href="https://www.reddit.com/mobile/download">Get the Reddit App</a></li>
+              <li><a href="https://about.reddit.com/engineering/">Engineering</a></li>
+              <li><a href="https://www.reddit.com/gold">Get Reddit Gold</a></li>
+              <li><a href="https://www.redditgifts.com/">Reddit Gifts</a></li>
+              <li  class="  current-current_page_item "><a href="/">Upvoted Blog</a></li>
+              <li><a href="https://www.reddit.com">Reddit.com</a></li>
+              <li><a href="https://www.reddit.com/dev/api">Developers</a></li>
+            </ul></div>				</aside>
+      </div>
+
+      <div class="callout-social-newsletter">
+
+        <div class="follow-social">
+          <h3>Follow Reddit:</h3>
+
+          <ul class="footer-social">
+            <li>
+              <a href="https://www.instagram.com/reddit" class="icon icon-follow-instagram" target="_blank">
+                <span class="screen-reader-text">Instagram</span>
+              </a>
             </li>
-        </ul>
-    </div>
-</div>
+            <li>
+              <a href="https://www.twitter.com/reddit" class="icon icon-follow-twitter" target="_blank">
+                <span class="screen-reader-text">Twitter</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.facebook.com/reddit" class="icon icon-follow-facebook" target="_blank">
+                <span class="screen-reader-text">Facebook</span>
+              </a>
+            </li>
+          </ul>
+        </div>
 
-</header>
-<div class="header-filler"></div>
-
-  
-
-      
-      
-    
-
-    
-    
-
-    
-    
-
-	  
-  <section class="home-container" role="complementary">
-    <section class="exchanges-container js-exchanges-container exchanges-container--w-sign-up" role="main">
-      <div class="exchanges-section exchanges-how-to">
-  <h1 class="exchanges-section__heading">Gift exchanges - they're fun and free!</h1>
-  <ul class="exchanges-how-to__steps">
-    <li class="exchanges-how-to__steps__item">
-      <img class="exchanges-how-to__steps__item__img"
-           src="https://d2npbuaakacvlz.cloudfront.net/img-optim/exchanges/exchange_flow_tile_1.jpg"
-           alt="Sign up & get matched">
-      <span class="exchanges-how-to__steps__item__label" title="Sign up & get matched">
-        Sign up & get matched
-      </span>
-    </li>
-    <li class="exchanges-how-to__steps__item">
-      <img class="exchanges-how-to__steps__item__img"
-           src="https://d2npbuaakacvlz.cloudfront.net/img-optim/exchanges/exchange_flow_tile_2.jpg"
-           alt="Find the perfect gift & send it">
-      <span class="exchanges-how-to__steps__item__label" title="Find the perfect gift & send it">
-        Find the perfect gift & send it
-      </span>
-    </li>
-    <li class="exchanges-how-to__steps__item">
-      <img class="exchanges-how-to__steps__item__img"
-           src="https://d2npbuaakacvlz.cloudfront.net/img-optim/exchanges/exchange_flow_tile_3.jpg"
-           alt="Receive a gift from your match">
-      <span class="exchanges-how-to__steps__item__label" title="Receive a gift from your match">
-        Receive a gift from your match
-      </span>
-    </li>
-  </ul>
-  <div class="exchanges-how-to__notify-form">
-    <form class="exchanges-notify-form js-exchanges-notify-form">
-      <span class="exchanges-notify-form__label">
-        Next round of exchanges starting soon<br>Sign up to get notified!
-      </span>
-      <input class="exchanges-notify-form__email js-exchanges-notify-email" type="email"
-             name="email" placeholder="Your Email" maxlength="128">
-      <input type="submit" title="Submit" class="exchanges-notify-form__submit" value="Submit">
-    </form>
-  </div>
-</div>
-
-      <div class="exchanges-section exchanges-current">
-  <h1 class="exchanges-section__heading">Current exchanges</h1>
-  <ul class="exchanges-current__list">
-    
-  </ul>
-</div>
-
-      <div class="exchanges-section exchanges-past">
-  <h1 class="exchanges-section__heading">Past exchanges</h1>
-  <div class="exchanges-past__container js-past-exchanges">
-    <ul class="past-exchanges-list js-past-exchanges-list"></ul>
-    <div class="past-exchanges-nav">
-      <button type="button" class="past-exchanges-nav__prev js-past-exchanges-prev btn-icon icon-circle-arrow-left"
-              title="Previous page"></button>
-      <span class="past-exchanges-nav__page-number js-past-exchanges-page"></span>
-      <button type="button" class="past-exchanges-nav__next js-past-exchanges-next btn-icon icon-circle-arrow-right"
-              title="Next page"></button>
-    </div>
-    <div class="past-exchanges-loading">
-      <img class="past-exchanges-loading__img" title="Loading..."
-           src="https://d2npbuaakacvlz.cloudfront.net/images/ajax-loader.gif" />
-    </div>
-  </div>
-</div>
-
-    </section>
-  </section>
-  <img src="https://engine.a.redditmedia.com/udb/5146/rt/163281/2/i.gif" border="0" width="1" height="1" alt="Amazon" />
-
-
-	  
-    
-
-    <footer class="footer-body">
-  <div class="footer-container">
-    <div class="footer-row">
-      <div class="footer-col">
-        <h3 class="footer-head">About</h3>
-        <ul class="footer-link-lists">
-          <li class="footer-link"><a href="http://www.redditgifts.com/about/">What is redditgifts?</a></li>
-          <li class="footer-link"><a href="http://www.redditgifts.com/blog/">Blog</a></li>
-          <li class="footer-link"><a href="http://www.reddit.com/jobs">Careers</a></li>
-        </ul>
+        <form action="https://reddit.createsend.com/t/i/s/jyydlh/" method="post" id="subForm" class="newsletter-signup validate-form" novalidate="">
+          <h3>Get Reddit in your inbox weekly:</h3>
+          <div class="notifications"></div>
+          <fieldset class="field-email">
+            <label for="fieldEmail">email address</label>
+            <input id="fieldEmail" class="fieldEmail has-label" name="cm-jyydlh-jyydlh" type="email" required="">
+            <span class="required-alert">This field is required</span>
+          </fieldset>
+          <button type="submit" class="newsletter-submit">Subscribe</button>
+        </form>
       </div>
-      <div class="footer-col">
-        <h3 class="footer-head">Help Center</h3>
-        <ul class="footer-link-lists">
-          <li class="footer-link"><a href="http://www.redditgifts.com/info/">Exchanges</a></li>
-          <li class="footer-link"><a href="http://www.redditgifts.com/faq/">FAQ</a></li>
-        </ul>
+    </div><!-- .wrapper -->
+  </div><!-- .footer-callouts -->
+
+  <div class="site-info">
+    <div class="wrapper clearfix">
+      <div class="disclaimer-links">
+        <li><a href="https://www.reddit.com/help/contentpolicy">Content Policy</a></li>
+        <li><a href="https://www.reddit.com/help/privacypolicy">Privacy Policy</a></li>
+        <li><a href="https://www.reddit.com/help/useragreement">User Agreement</a></li>
       </div>
-      <div class="footer-social">
-        <div class="footer-social-form">
-          <div class="footer-email">
-            <h3 class="footer-head">Sign up for our newsletter!</h3>
-            <div id="js-email-container" data-wait-logo="https://d2npbuaakacvlz.cloudfront.net/images/ajax-loader.gif" class="footer-email-container">
-              <form id="js-footer-mailing-form">
-                <input id="js-email-input" data-endpoint="/profiles/join-list/" type="email"
-                       placeholder="Your Email" class="footer-email-input">
-                <input type="submit" class="email-submit">
-              </form>
-            </div>
-          </div>
-          <div class="footer-social-icons">
-            <h3 class="footer-head">Socialize</h3>
-            <ul class="social-list">
-              <a target="_blank" href="http://twitter.com/redditgifts"><li><i class="footer-social-icon icon-twitter"></i></li></a>
-              <a target="_blank" href="http://www.facebook.com/redditgifts"><li><i class="footer-social-icon icon-facebook"></i></li></a>
-              <a target="_blank" href="http://pinterest.com/redditgifts/"><li><i class="footer-social-icon icon-pinterest"></i></li></a>
-              <a target="_blank" href="http://instagram.com/redditgifts"><li><i class="footer-social-icon icon-instagram"></i></li></a>
-              <a target="_blank" href="https://redditgifts.com/blog/"><li><i class="footer-social-icon icon-comments"></i></li></a>
-            </ul>
-          </div>
+
+      <span>© 2016 reddit, inc. All rights reserved.</span>
+    </div>
+  </div><!-- .site-info -->
+</footer>
         </div>
       </div>
-     </div>
-    <div class="clear"></div>
+    </footer>
   </div>
-  <div class="footer-row minor-footer">
-    <div class="minor-footer-container">
-      <div class="minor-footer-copyright">&copy; 2017 reddit, Inc. All Rights Reserved.</div>
-      <div class="minor-footer-links">
-        <div class="minor-footer-col"><a href="http://www.redditgifts.com/privacy/" class="minor-footer-link">Privacy Policy</a></div>
-        <div class="minor-footer-col"><a href="http://www.redditgifts.com/terms/" class="minor-footer-link">Terms of Service</a></div>
-        <div class="minor-footer-col"><a href="http://www.reddit.com" target="_blank" class="minor-footer-link">reddit, Inc.<img width="1" height="1" src="https://engine.a.redditmedia.com/udb/5146/rt/93156/1/i.gif" alt="reddit" /></a></div>
-      </div>
-    </div>
-  </div>
-</footer>
-
-<script>
-  var formInfo = {
-      url: '/newsletters/subscribe_newsletter/'
-  };
-</script>
+</div>
 
 
-    <script type="text/javascript" src="https://d2npbuaakacvlz.cloudfront.net/CACHE/js/3fbd1d2ee737.js"></script>
+<script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"en\/","currentPath":"node\/226","currentPathIsAdmin":false,"isFront":true,"currentLanguage":"en"},"pluralDelimiter":"\u0003","ajaxPageState":{"libraries":"core\/html5shiv,reddit_helpdesk_search\/reddit-search-autocomplete,reddit_helpdesk_theme\/core,system\/base","theme":"reddit_helpdesk_theme","theme_token":null},"ajaxTrustedUrl":{"\/en\/search":true},"ajax":[],"user":{"uid":0,"permissionsHash":"82653dc4511c895a5d75fe4a963625910f924e944f452f24075a4fdde3ed57cd"}}</script>
+<script src="/sites/default/files/js/js_Zft6KixTSICm6m0OAvbSq5QtVKJNcuNYjBL7joosRW0.js"></script>
 
-    
-
-    <!-- For social media to use. -->
-    <div id="fb-root"></div>
-    <div class="social-images">
-      
-    </div>
-
-    
-      <script type="text/javascript" src="https://s.skimresources.com/js/26605X854707.skimlinks.js"></script>
-      <script type="text/javascript" src="https://d2npbuaakacvlz.cloudfront.net/CACHE/js/9f7bce1bd271.js"></script>
-    
-
-    
-      <script type="text/javascript">
-        adroll_adv_id = "XNYNP5KHKJCBXOHQ4TW3VD";
-        adroll_pix_id = "FFSJP3C7YNCPNDYECLA5HK";
-        (function () {
-        var oldonload = window.onload;
-        window.onload = function(){
-          __adroll_loaded=true;
-          var scr = document.createElement("script");
-          var host = (("https:" == document.location.protocol) ? "https://s.adroll.com" : "http://a.adroll.com");
-          scr.setAttribute('async', 'true');
-          scr.type = "text/javascript";
-          scr.src = host + "/j/roundtrip.js";
-          ((document.getElementsByTagName('head') || [null])[0] ||
-          document.getElementsByTagName('script')[0].parentNode).appendChild(scr);
-          if(oldonload){oldonload()}};
-        }());
-      </script>
-    
-
-    
-
-    <input type='hidden' name='csrfmiddlewaretoken' value='u3mMgEgh0jonROzcJ5uIoovLSzE8Phnv' />
-</body>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"fc2e09474a","applicationID":"51796101","transactionName":"Y1EBYUtWCkRRVhIMX1obIlZNXgtZH0UHAlVrVwJWUVI=","queueTime":0,"applicationTime":44,"atts":"TxYCFwNMGUo=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
 </html>
